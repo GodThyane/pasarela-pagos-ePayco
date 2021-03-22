@@ -29,8 +29,8 @@ export class EpayService {
       country: 'co',
       lang: 'es',
 
-      confirmation: 'http://localhost:4200',
-      response: 'http://localhost:4200',
+      confirmation: 'https://pasarela-pagos-e-payco.vercel.app',
+      response: 'https://pasarela-pagos-e-payco.vercel.app',
 
       //Onpage="false" - Standard="true"
       external: 'false'
