@@ -1,0 +1,29 @@
+<h3>
+  {{title}}
+</h3>
+
+<div *ngIf="!products">
+  Cargando listado de productos...
+</div>
+
+<div *ngIf="products">
+  <div class="row">
+    <div class="col-lg-2" *ngFor="let product of products">
+      <div class="img-thumbnail" style="margin-bottom: 20px">
+        <div *ngIf="product.imagen" class="imagen_container">
+          <img class="img_product" src="{{product.imagen}}">
+        </div>
+        <div *ngIf="!product.imagen">
+          <div class="img_relleno"></div>
+        </div>
+        <div class="figure-caption">
+          <h3>{{product.nombre}}</h3>
+          <p>{{product.precio}} $</p>
+          <div class="text-center" *ngIf="confirmed!=product.id">
+            <a (click)="buy(product)" id="buttonDelete" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
